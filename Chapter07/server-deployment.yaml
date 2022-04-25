@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+      - name: hello-server
+        # Replace $LOCATION with your Artifact Registry location (e.g., us-west1).
+        # Replace $GCLOUD_PROJECT with your project ID.
+        image: gcr.io/qwiklabs-gcp-01-69ec38c49945/node-server:v1
+        # This app listens on port 8080 for web traffic by default.
+        ports:
+        - containerPort: 4000
+        env:
+          - name: PORT
+            value: "4000"
