@@ -51,7 +51,7 @@ kubectl apply -f ingress.yaml
 ```
 
 
-Wait for the externañl IP address to be defined to test frontend
+Wait for the external IP address to be defined to test frontend
 ```
 kubectl get services
 
@@ -62,5 +62,30 @@ kubernetes          ClusterIP      10.96.0.1    <none>          443/TCP         
 
 
 Now you can go to a browser http://34.140.63.173:3001
+
+
+
+
+Some useful references
+
+
+https://www.packtpub.com/product/react-projects/9781789954937
+https://github.com/PacktPublishing/React-Projects
+https://github.com/shepardo/react_n_typescript_demos
+
+https://www.manning.com/books/cors-in-action
+https://effectivetypescript.com/
+
+https://exercism.org/tracks/typescript
+https://github.com/type-challenges/type-challenges
+https://angular.io/tutorial
+
+
+
+https://www.stackhawk.com/blog/react-cors-guide-what-it-is-and-how-to-enable-it/
+https://stackabuse.com/handling-cors-with-node-js/
+https://betterprogramming.pub/deploy-a-full-stack-go-and-react-app-on-kubernetes-4f31cdd9a48b
+
+
 
 
