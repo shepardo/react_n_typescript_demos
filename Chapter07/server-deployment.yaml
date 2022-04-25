@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: api
+      component: api
   template:
     metadata:
       labels:
-        app: api
+        component: api
     spec:
       containers:
       - name: hello-server
