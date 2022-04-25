@@ -11,9 +11,9 @@ spec:
         paths:
           - path: /?(.*)
             backend:
-              serviceName: client-service
+              serviceName: client-deployment
               servicePort: 3001
-          - path: /api/?(.*)
+          - path: /graphql/?(.*)
             backend:
-              serviceName: api-service
+              serviceName: api-deployment
               servicePort: 4000
