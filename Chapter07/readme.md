@@ -6,6 +6,12 @@ Set the project id
 DEVSHELL_PROJECT_ID=qwiklabs-gcp-04-ce901d937663
 ```
 
+
+Before creating the docker images for client & server it is necessary to edit the deployment files of both to change the Docker registry url, so
+open `server-deployment.yaml` and edit the line `image: gcr.io/qwiklabs-gcp-01-69ec38c49945/node-server:v1` to change the `qwiklabs-gcp-01-69ec38c49945` to the current project id (the one set previously for variable `DEVSHELL_PROJECT_ID`), do the same for `client-deployment.yaml`.
+
+
+
 Build the client image
 ```
 cd client
