@@ -18,7 +18,8 @@ const isAuthenticated = sessionStorage.getItem('token');
 const httpLink = new HttpLink({
   //uri: 'http://localhost:4000/graphql',
   //uri: window.location.origin + ":4000/graphql"
-  uri: window.location.protocol + '//' + window.location.hostname + ":4000/graphql"
+  //uri: window.location.protocol + '//' + window.location.hostname + ":4000/graphql"
+  uri: window.location.protocol + '//' + window.location.hostname + "/graphql"
 });
 
 const authLink = setContext((_, { headers }) => {

@@ -3,9 +3,11 @@ kind: Service
 metadata:
     name: client-service 
 spec:
-    type: ClusterIP
+    type: NodePort
     selector:
         component: client
     ports:
-     -   port: 3001
-         targetPort: 3001
+     -  port: 8080
+        targetPort: 3001
+        protocol: TCP
+        name: http
