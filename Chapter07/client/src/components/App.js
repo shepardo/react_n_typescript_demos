@@ -16,7 +16,9 @@ import { setContext } from 'apollo-link-context';
 const isAuthenticated = sessionStorage.getItem('token');
 
 const httpLink = new HttpLink({
-  uri: 'http://localhost:4000/graphql',
+  //uri: 'http://localhost:4000/graphql',
+  //uri: window.location.origin + ":4000/graphql"
+  uri: window.location.protocol + '//' + window.location.hostname + ":4000/graphql"
 });
 
 const authLink = setContext((_, { headers }) => {

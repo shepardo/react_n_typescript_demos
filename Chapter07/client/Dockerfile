@@ -1,6 +1,6 @@
 
 FROM node:14-alpine AS development
-ENV NODE_ENV development
+#ENV NODE_ENV development
 ENV PORT=3001
 # Add a work directory
 WORKDIR /app
